@@ -1,0 +1,37 @@
+{
+  "name": "try-require-multiple",
+  "description": "tries to require a module, if it fails load another instead",
+  "version": "0.0.0",
+  "homepage": "https://github.com/paulpflug/",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulpflug/try-require-multiple"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "require.js",
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "coffeescript": "^2.0.0-beta3"
+  },
+  "keywords": [
+    "require",
+    "try",
+    "multiple"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "coffee --no-header -b --compile --output ./ src/*.coffee",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish"
+  }
+}
